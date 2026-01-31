@@ -1,0 +1,46 @@
+:root {
+  background-color: #020617;
+  color-scheme: dark; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #020617;
+  color: #ffffff;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+main {
+  flex: 1; 
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto; 
+  padding-top: 80px; 
+}
+
+footer {
+  flex-shrink: 0;
+}

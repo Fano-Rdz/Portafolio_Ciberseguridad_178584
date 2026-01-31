@@ -1,0 +1,133 @@
+/* Header.css */
+
+/* 1. Contenedor Principal */
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  background-color: #0f172a; /* Azul oscuro pizarra */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  z-index: 1000;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* 2. Reset de Botones (Para que no parezcan botones de sistema) */
+.logo-button, 
+.nav-button, 
+.mobile-nav-button,
+.hamburger-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+/* 3. Estilo del Logo/Título */
+.logo-button {
+  gap: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.logo-button:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #3b82f6; /* Azul brillante */
+}
+
+/* 4. Navegación Desktop */
+.header-nav-desktop {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* Efecto de aclarado (Hover) */
+.nav-button:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #93c5fd;
+}
+
+/* Estilo para el botón de la página actual (Opcional) */
+.nav-button.active {
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* 5. Botón Hamburguesa (Oculto por defecto) */
+.hamburger-button {
+  display: none;
+  padding: 5px;
+}
+
+/* 6. Menú Móvil Desplegable */
+.mobile-menu {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  background-color: #1e293b;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid #3b82f6;
+  animation: slideDown 0.3s ease-out;
+}
+
+.mobile-nav-button {
+  width: 100%;
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  justify-content: flex-start;
+}
+
+.mobile-nav-button:hover {
+  background-color: #334155;
+  color: #3b82f6;
+  padding-left: 32px; /* Efecto de empuje */
+}
+
+/* 7. Responsive Design */
+@media (max-width: 768px) {
+  .header-nav-desktop {
+    display: none;
+  }
+
+  .hamburger-button {
+    display: block;
+  }
+
+  .logo-button span {
+    font-size: 0.9rem; /* Texto más pequeño en móvil */
+  }
+}
+
+/* Animación de entrada para el menú móvil */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,50 @@
+.footer-global {
+  background-color: #020617;
+  border-top: 1px solid #1e293b;
+  padding: 0.8rem 2rem; 
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mision-texto-mini {
+  color: #64748b;
+  font-style: italic;
+  font-size: 0.8rem;
+  margin: 0;
+  border-left: 2px solid #3b82f6;
+  padding-left: 10px;
+}
+
+.email-btn-mini {
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  color: #f8fafc;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.email-btn-mini:hover {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+.footer-copyright {
+  text-align: center;
+  font-size: 0.65rem;
+  color: #334155;
+  margin-top: 0.5rem;
+}
