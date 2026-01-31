@@ -7,7 +7,7 @@ import { Inicio, Parcial1, Parcial2, Parcial3 } from './pages';
 function App() {
 
   const [paginaActual, setPaginaActual] = useState<'inicio' | 'P1' | 'P2' | 'P3'>('inicio');
-  const componentes: Record<string, JSX.Element> = {
+  const componentes: Record<string, any> = {
     inicio: <Inicio />,
     P1: <Parcial1 />,
     P2: <Parcial2 />,
