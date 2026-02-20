@@ -1,0 +1,98 @@
+/* Parcial1.css */
+
+:root {
+  --primary-blue: #3b82f6;
+  --dark-bg: #020617;
+  --card-bg: #0f172a;
+  --border-color: #1e293b;
+  --text-dim: #94a3b8;
+}
+
+.parcial-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.titulo-parcial {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.titulo-parcial span {
+  color: var(--primary-blue);
+  text-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+/* Contenedor de los botones */
+.tabs-wrapper {
+  display: inline-flex;
+  background: var(--card-bg);
+  padding: 5px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.tab-button {
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.tab-button.active {
+  background: var(--primary-blue);
+  color: white;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Tarjeta de contenido */
+.content-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2.5rem;
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+  animation: slideUp 0.5s ease-out;
+}
+
+.content-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--primary-blue);
+}
+
+.actividad-titulo {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.actividad-texto {
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

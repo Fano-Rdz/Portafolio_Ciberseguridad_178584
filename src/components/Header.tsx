@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ShieldCheck, Menu, X } from 'lucide-react';
+import { ShieldCheck, Menu, X, ChevronDown } from 'lucide-react'; // Añadí ChevronDown para el estilo
 import './css/Header.css';
 
 interface HeaderProps {
@@ -28,18 +28,28 @@ const Header = ({ cambiarPagina }: HeaderProps) => {
         <span>Portafolio de Seguridad Informática</span>
       </button>
 
+      {/* Menú Desktop con Dropdown */}
       <nav className="header-nav-desktop">
-        {opciones.map((opcion) => (
-          <button 
-            key={opcion.id} 
-            className="nav-button"
-            onClick={() => manejarNavegacion(opcion.id)}
-          >
-            {opcion.nombre}
+        <div className="dropdown">
+          <button className="nav-button dropdown-trigger">
+            Actividad <ChevronDown size={16} />
           </button>
-        ))}
+          
+          <div className="dropdown-content">
+            {opciones.map((opcion) => (
+              <button 
+                key={opcion.id} 
+                className="dropdown-item"
+                onClick={() => manejarNavegacion(opcion.id)}
+              >
+                {opcion.nombre}
+              </button>
+            ))}
+          </div>
+        </div>
       </nav>
 
+      {/* Botón Hamburguesa (Móvil) */}
       <button 
         className="hamburger-button" 
         onClick={() => setMenuAbierto(!menuAbierto)}
@@ -47,8 +57,10 @@ const Header = ({ cambiarPagina }: HeaderProps) => {
         {menuAbierto ? <X size={28} /> : <Menu size={28} />}
       </button>
 
+      {/* Menú Móvil */}
       {menuAbierto && (
         <div className="mobile-menu">
+          <p className="mobile-section-title">Actividad</p>
           {opciones.map((opcion) => (
             <button 
               key={opcion.id} 

@@ -1,0 +1,148 @@
+.actividad-content {
+  color: #e2e8f0;
+}
+
+.act-header {
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  padding: 4px 12px;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #3b82f6;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.stat-card {
+  background: #0f172a;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.stat-sub {
+  font-size: 0.7rem;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.analysis-item {
+  background: rgba(15, 23, 42, 0.5);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 3px solid #3b82f6;
+}
+
+.analysis-item h4 {
+  color: #3b82f6;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.cost-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.cost-table th {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 2px solid #1e293b;
+  color: #94a3b8;
+}
+
+.cost-table td {
+  padding: 12px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.total-row {
+  font-weight: 800;
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.compliance-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.compliance-box {
+  background: #0f172a;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #1e293b;
+}
+
+.compliance-box strong {
+  display: block;
+  color: #60a5fa;
+  margin-bottom: 0.5rem;
+}
+
+.report-footer {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #475569;
+}

@@ -1,0 +1,102 @@
+/* Estructura de columna para tarjetas más grandes */
+.methodology-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.full-info-card {
+  display: flex;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.full-info-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateX(10px);
+}
+
+.card-side-icon {
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  min-width: 120px;
+}
+
+.card-main-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+
+.card-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.card-header-flex h4 {
+  font-size: 1.4rem;
+  color: #fff;
+  margin: 0;
+}
+
+.tag-version {
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 20px;
+  color: #94a3b8;
+}
+
+.main-desc {
+  color: #cbd5e1;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tech-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.spec-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.spec-item strong {
+  color: #f1f5f9;
+}
+
+.card-footer-tags {
+  display: flex;
+  gap: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 1rem;
+}
+
+.footer-tag {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-family: monospace;
+}
+
+.monospace {
+  font-family: 'Fira Code', monospace;
+}
+
+.terminal-line {
+  margin-bottom: 0.5rem;
+}

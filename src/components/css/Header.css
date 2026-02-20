@@ -131,3 +131,44 @@
     transform: translateY(0);
   }
 }
+
+/* Estilos básicos para el Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-trigger {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dropdown-content {
+  display: none; /* Oculto por defecto */
+  position: absolute;
+  background-color: #1e293b; /* Color oscuro acorde al slate-950 */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Se muestra al pasar el mouse */
+}
+
+.dropdown-item {
+  width: 100%;
+  padding: 12px 16px;
+  text-align: left;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #334155;
+}
