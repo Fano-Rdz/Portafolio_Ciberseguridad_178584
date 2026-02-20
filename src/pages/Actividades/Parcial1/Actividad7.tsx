@@ -1,5 +1,5 @@
 import './css/Actividad7.css';
-import { ShieldAlert, Monitor, Search, Lock, UserX, AlertTriangle, Download } from 'lucide-react';
+import { Monitor, Search, Lock, UserX, AlertTriangle, Download } from 'lucide-react';
 
 export const Actividad7 = () => {
   return (
