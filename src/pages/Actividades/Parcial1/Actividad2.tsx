@@ -16,7 +16,7 @@ export const Actividad2 = () => {
             Importar PDF
           </a>
         </div>
-        <h2 className="text-3xl font-bold text-white mt-4">Arquitectura de Seguridad y Terminología</h2>
+        <h2 className="text-3xl font-bold text-white mt-4"> Arquitectura de Seguridad y Terminología </h2>
         <p className="text-slate-400 mt-2">
           Análisis de servicios de seguridad y mecanismos de defensa basados en estándares internacionales.
         </p>
