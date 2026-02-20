@@ -8,7 +8,7 @@ export const Actividad1 = () => {
         <div className="header-top">
           <span className="badge">Caso de Estudio: PEMEX 2019</span>
           <a 
-            href="/Actividades/Parcial1/act01-Equipo2.pdf" 
+            href="./Actividades/Parcial1/act01-Equipo2.pdf" 
             download="act01-Equipo2.pdf"
             className="download-button"
           >
