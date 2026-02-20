@@ -8,7 +8,7 @@ export const Actividad3 = () => {
         <div className="header-top">
           <span className="badge terminal">Netfilter / iptables</span>
           <a 
-            href="./Actividades/Parcial1/178584-act03.pdf" 
+            href={`${import.meta.env.BASE_URL}Actividades/Parcial1/178584-act02.pdf`} 
             download="178584-act03.pdf"
             className="download-button terminal-btn"
           >
