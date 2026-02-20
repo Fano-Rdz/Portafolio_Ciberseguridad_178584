@@ -8,7 +8,7 @@ export const Actividad7 = () => {
         <div className="header-top">
           <span className="badge danger">Cibercrimen & Dark Web</span>
           <a 
-            href="/Actividades/Parcial1/178584-act07.pdf" 
+            href="./Actividades/Parcial1/178584-act07.pdf" 
             download="178584-act07.pdf"
             className="download-button danger-btn"
           >
