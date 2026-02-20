@@ -8,7 +8,7 @@ export const Actividad2 = () => {
         <div className="header-top">
           <span className="badge secondary">Marcos: X.800 & RFC 4949</span>
           <a 
-            href="/Actividades/Parcial1/178584-act02.pdf" 
+            href="./Actividades/Parcial1/178584-act02.pdf" 
             download="178584-act02.pdf"
             className="download-button secondary"
           >
