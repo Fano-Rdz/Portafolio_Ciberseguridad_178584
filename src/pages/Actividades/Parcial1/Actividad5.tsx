@@ -11,7 +11,7 @@ export const Actividad5 = () => {
         <div className="header-top">
           <span className="badge terminal">Análisis Técnico v2.0</span>
           <a 
-            href="/Actividades/Parcial1/178584-act05.pdf" 
+            href="./Actividades/Parcial1/178584-act05.pdf" 
             download="178584-act05.pdf"
             className="download-button terminal-btn"
           >
