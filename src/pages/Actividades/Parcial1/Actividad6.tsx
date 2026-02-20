@@ -11,7 +11,7 @@ export const Actividad6 = () => {
         <div className="header-top">
           <span className="badge terminal">Cisco IOS - VPN Site-to-Site</span>
           <a 
-            href="/Actividades/Parcial1/178584-act06.pdf" 
+            href="./Actividades/Parcial1/178584-act06.pdf" 
             download="178584-act06.pdf"
             className="download-button terminal-btn"
           >
