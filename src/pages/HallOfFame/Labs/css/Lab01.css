@@ -1,0 +1,63 @@
+/* Contenedor de evidencia única */
+.sqli-evidence-section {
+  margin: 2rem 0;
+}
+
+.evidence-container-single {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.evidence-img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+}
+
+.evidence-caption {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+/* Lista de pasos numerada */
+.sqli-list-steps {
+  list-style: none;
+  padding: 0;
+}
+
+.sqli-list-steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 1rem;
+  color: #94a3b8;
+}
+
+.sqli-list-steps span {
+  background: #3b82f6;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* Caja de Mitigación resaltada */
+.sqli-mitigacion-box {
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 1.5rem;
+  border-radius: 12px;
+}

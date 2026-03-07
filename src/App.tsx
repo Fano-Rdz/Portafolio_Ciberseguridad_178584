@@ -3,17 +3,20 @@ import Footer from './components/footer';
 import { useState } from 'react';
 import "./index.css"
 import { Inicio, Parcial1, Parcial2, Parcial3 } from './pages';
+import { PR01, PR02} from './pages/Proyectos';
+import { SQLInjection } from './pages/HallOfFame';
 
 function App() {
-  // Mantenemos los IDs técnicos ('P1', 'P2', etc.) para la lógica, 
-  // pero los nombres visuales los definiremos en el Header.
-  const [paginaActual, setPaginaActual] = useState<'inicio' | 'P1' | 'P2' | 'P3'>('inicio');
+  const [paginaActual, setPaginaActual] = useState<'inicio' | 'P1' | 'P2' | 'P3' | 'PR01' | 'PR02' | 'SQLI'>('inicio');
 
-  const componentes: Record<string, any> = {
+  const componentes: Record<string, any>= {
     inicio: <Inicio />,
     P1: <Parcial1 />,
     P2: <Parcial2 />,
-    P3: <Parcial3 />
+    P3: <Parcial3 />,
+    PR01: <PR01 />, 
+    PR02: <PR02 />,
+    SQLI: <SQLInjection /> 
   };
 
   return (
@@ -21,7 +24,7 @@ function App() {
       <Header cambiarPagina={setPaginaActual} />
       
       <main className="pt-20">
-        {componentes[paginaActual]}
+        {componentes[paginaActual] || <Inicio />}
       </main>
 
       <Footer />

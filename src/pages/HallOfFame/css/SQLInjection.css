@@ -1,0 +1,263 @@
+/* Base inspirado en image_5141cb.png */
+.sqli-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.sqli-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sqli-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: white;
+}
+
+.sqli-title span {
+  color: #3b82f6;
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+.sqli-subtitle {
+  color: #94a3b8;
+  margin-top: 0.5rem;
+}
+
+/* Tabs Scrollable */
+.sqli-tabs-container {
+  background: rgba(30, 41, 59, 0.5);
+  padding: 0.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #334155;
+}
+
+.sqli-tabs-scroll {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 5px;
+}
+
+.sqli-tab-button {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 600;
+}
+
+.sqli-tab-button.active {
+  background: #3b82f6;
+  color: white;
+}
+
+/* Card Content */
+.sqli-content-card {
+  background: #111827;
+  border-radius: 16px;
+  border: 1px solid #1e293b;
+  padding: 2rem;
+  min-height: 400px;
+}
+
+.sqli-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.sqli-badge {
+  background: rgba(59, 130, 246, 0.1);
+  color: #60a5fa;
+  padding: 0.4rem 1rem;
+  border-radius: 99px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.sqli-download-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.sqli-section-title {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.sqli-section-desc {
+  color: #94a3b8;
+  margin-bottom: 2rem;
+}
+
+/* Grid Stats */
+.sqli-grid-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.sqli-stat-box {
+  background: rgba(30, 41, 59, 0.3);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+}
+
+.sqli-stat-label {
+  color: #64748b;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sqli-stat-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+.sqli-stat-sub {
+  color: #475569;
+  font-size: 0.75rem;
+}
+
+/* Code Block */
+.sqli-code-block {
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #334155;
+}
+
+.code-header {
+  background: #1e293b;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+pre {
+  padding: 1.5rem;
+  color: #10b981;
+  font-family: 'Fira Code', monospace;
+  overflow-x: auto;
+}
+
+.sqli-fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.sqli-text-sm { font-size: 0.9rem; color: #94a3b8; line-height: 1.5; }
+.sqli-info-section, .sqli-procedimiento, .sqli-mitigacion { margin-bottom: 2rem; }
+.sqli-info-section h3, .sqli-procedimiento h3, .sqli-mitigacion h3 { 
+  display: flex; align-items: center; gap: 8px; color: #f8fafc; margin-bottom: 1rem;
+}
+.sqli-list { padding-left: 1.2rem; color: #94a3b8; }
+.sqli-list li { margin-bottom: 0.5rem; }
+.payload-explanation { background: #1a1a1a; padding: 1rem; font-size: 0.85rem; border-top: 1px solid #334155; }
+.payload-explanation ul { list-style: none; padding: 0; }
+.payload-explanation li code { color: #f59e0b; font-weight: bold; margin-right: 8px; }
+.status-solved { color: #10b981; display: flex; align-items: center; gap: 5px; font-weight: bold; font-size: 0.9rem; }
+.sqli-evidence-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 1.5rem 0; }
+.evidence-placeholder { background: #000; border: 1px dashed #334155; height: 150px; display: flex; align-items: center; justify-content: center; color: #475569; border-radius: 8px; }
+.solved-img { border-color: #10b981; color: #10b981; }
+
+/* Footer General del apartado SQLi */
+.sqli-footer {
+  margin-top: 2rem;
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 1.5rem;
+  backdrop-filter: blur(8px);
+}
+
+.sqli-footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.sqli-footer-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-main-text {
+  color: #f8fafc;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.footer-sub-text {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.sqli-download-footer-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.sqli-download-footer-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.4);
+  filter: brightness(1.1);
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+  .sqli-footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .sqli-footer-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .sqli-download-footer-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

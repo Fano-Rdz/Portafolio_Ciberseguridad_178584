@@ -1,5 +1,3 @@
-import './css/Inicio.css';
-
 export const Parcial2 = () => {
   return (
     <div className="inicio-container fade-in">
