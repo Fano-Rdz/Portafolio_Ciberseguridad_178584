@@ -79,7 +79,7 @@ export const SQLInjection = () => {
             </div>
           </div>
           <a 
-            href="./Actividades/Parcial2/act08-Equipo2.pdf" 
+            href={`${import.meta.env.BASE_URL}Actividades/Parcial2/act08-Equipo2.pdf`} 
             download="act08-Equipo2.pdf" 
             className="sqli-download-footer-btn"
           >
