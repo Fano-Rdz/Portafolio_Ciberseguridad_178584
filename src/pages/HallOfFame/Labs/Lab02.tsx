@@ -1,4 +1,4 @@
-import { Terminal, ShieldCheck, Search, Code, CheckCircle, ExternalLink, Lock } from 'lucide-react';
+import { Terminal, ShieldCheck, Search, Code, CheckCircle, ExternalLink } from 'lucide-react';
 
 export const Lab02 = () => {
   return (

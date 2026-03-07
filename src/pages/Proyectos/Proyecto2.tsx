@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Shield, BarChart3, Users, CheckCircle, Lock, AlertTriangle, ExternalLink, ChevronRight, Download } from 'lucide-react';
+import { Shield, BarChart3, Users, CheckCircle, Lock, AlertTriangle, ChevronRight, Download } from 'lucide-react';
 import './css/PR02.css';
 
 export const PR02 = () => {
