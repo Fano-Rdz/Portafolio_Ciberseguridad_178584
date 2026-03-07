@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Lab01, Lab02, Lab03, Lab04, Lab05, Lab06, Lab07, Lab08, Lab09, Lab10, Lab11, Lab12, Lab13, Lab14, Lab15, Lab16 } from './Labs';
 import './css/SQLInjection.css';
-import { FileText } from 'lucide-react';
+import { Download, FileText } from 'lucide-react';
 
 export const SQLInjection = () => {
   // Estado para controlar qué "Actividad" o sub-caso estamos viendo
@@ -78,6 +78,14 @@ export const SQLInjection = () => {
               <p className="footer-sub-text">Incluye los 16 casos de explotación y mitigación.</p>
             </div>
           </div>
+          <a 
+            href={`${import.meta.env.BASE_URL}Actividades/Parcial2/act08-Equipo2.pdf`} 
+            download="act08-Equipo2.pdf" 
+            className="sqli-download-footer-btn"
+          >
+            <Download size={18} />
+            Descargar Reporte Final (PDF)
+          </a>
         </div>
       </footer>
     </div>
