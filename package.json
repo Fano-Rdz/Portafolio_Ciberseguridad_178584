@@ -13,6 +13,7 @@
   },
   "homepage": "https://Fano-Rdz.github.io/Portafolio_Ciberseguridad_178584",
   "dependencies": {
+    "firebase": "^12.11.0",
     "lucide-react": "^0.563.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"

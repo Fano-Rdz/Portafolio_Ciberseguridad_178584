@@ -1,0 +1,210 @@
+/* --- VARIABLES DE COLOR (AJUSTADAS PARA TEMA OSCURO) --- */
+:root {
+  --quiz-bg-dark: #121212; /* Fondo muy oscuro, como el de tu portafolio */
+  --quiz-card-bg: #1e1e1e; /* Fondo de la tarjeta un poco más claro */
+  --quiz-primary: #3b82f6; /* Azul brillante para acentos y botones (similar al de tu tab active) */
+  --quiz-border: #333333; /* Líneas divisorias sutiles */
+  --quiz-text-main: #ffffff; /* Texto principal blanco */
+  --quiz-text-sub: #a0a0a0; /* Texto secundario gris claro */
+  --quiz-input-bg: #2d2d2d; /* Fondo de inputs oscuro */
+  --quiz-input-border: #444444; /* Borde de inputs */
+  --quiz-error: #ef4444; /* Rojo para errores */
+}
+
+/* --- CONTENEDOR GENERAL DE LA TAB --- */
+/* Asegúrate de que este contenedor en PR02.tsx no tenga estilos que choquen */
+.quiz-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh; /* Centra el contenido verticalmente */
+  padding: 20px;
+  background-color: var(--quiz-bg-dark);
+}
+
+/* --- ESTILOS DE LA PANTALLA DE BIENVENIDA (CONSENTIMIENTO) --- */
+.bienvenida-container {
+  max-width: 600px;
+  width: 100%;
+}
+
+.consentimiento-card {
+  background-color: var(--quiz-card-bg);
+  border: 1px solid var(--quiz-border);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* Sombra suave para dar profundidad */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Cabecera de la Tarjeta */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--quiz-primary);
+  border-bottom: 2px solid var(--quiz-border);
+  padding-bottom: 15px;
+}
+
+.card-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--quiz-text-main);
+  margin: 0;
+}
+
+.consent-icon {
+  color: var(--quiz-primary);
+}
+
+/* Cuerpo de la Tarjeta (Texto e Instrucciones) */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.texto-principal {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--quiz-text-main);
+  margin: 0;
+}
+
+.texto-principal strong {
+  color: var(--quiz-primary);
+  font-weight: 600;
+}
+
+/* Lista de Puntos (Mejorando los iconos y el espaciado) */
+.lista-puntos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.lista-puntos li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--quiz-text-sub);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.lista-puntos li svg {
+  color: var(--quiz-primary);
+  flex-shrink: 0; /* Evita que el icono se encoja */
+}
+
+.lista-puntos li strong {
+  color: var(--quiz-text-main);
+  font-weight: 600;
+}
+
+/* Footer de la Tarjeta (Alias y Botón) */
+.card-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.label-alias {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--quiz-text-main);
+}
+
+/* Input Group (Icono y Campo de texto) */
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  color: var(--quiz-text-sub);
+}
+
+.input-alias {
+  width: 100%;
+  padding: 12px 12px 12px 45px; /* Padding extra a la izquierda para el icono */
+  background-color: var(--quiz-input-bg);
+  border: 1px solid var(--quiz-input-border);
+  border-radius: 8px;
+  color: var(--quiz-text-main);
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-alias:focus {
+  outline: none;
+  border-color: var(--quiz-primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Estilo para el input con error */
+.input-alias.input-error {
+  border-color: var(--quiz-error);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+/* Texto de Error */
+.error-text {
+  color: var(--quiz-error);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+  margin-top: -5px; /* Lo acerca al input */
+}
+
+/* Botón Comenzar (Estilo principal, similar al de la tab active) */
+.btn-comenzar {
+  background-color: var(--quiz-primary);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-comenzar:hover {
+  background-color: #2563eb; /* Un azul un poco más oscuro al pasar el mouse */
+}
+
+.btn-comenzar:active {
+  transform: scale(0.98); /* Pequeño efecto de pulsación */
+}
+
+/* --- CLASES DE ANIMACIÓN --- */
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

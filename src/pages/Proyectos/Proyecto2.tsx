@@ -1,9 +1,12 @@
 import { useState } from 'react';
-import { Shield, BarChart3, Users, CheckCircle, Lock, AlertTriangle, ChevronRight, Download } from 'lucide-react';
+import { Shield, BarChart3, CheckCircle, Lock, AlertTriangle, ChevronRight, Download, Gamepad2, Trophy } from 'lucide-react';
+import { SeccionQuiz } from '../../components/SeccionQuiz';
+import { SeccionScoreboard } from '../../components/SeccionScoreboard';
 import './css/PR02.css';
 
 export const PR02 = () => {
   const [tabActiva, setTabActiva] = useState(1);
+  const [subTabActiva, setSubTabActiva] = useState('quiz'); 
 
   const datosTecnicos = [
     { 
@@ -180,14 +183,31 @@ export const PR02 = () => {
         )}
 
         {tabActiva === 2 && (
-          <div className="fade-in">
-            <div className="empty-state">
-              <Users size={48} className="empty-icon" />
-              <h2>Diseño de Simulación Interactiva (Quiz)</h2>
-              <span className="status-badge">PRÓXIMAMENTE</span>
-              <p>
-                Esta sección integrará un Phishing Quiz con 10 escenarios realistas, incorporando retroalimentación formativa y un sistema de puntuación global.
-              </p>
+          <div className="fade-in tab-simulacion-container">
+            <div className="sub-tabs-navigation">
+              <button 
+                onClick={() => setSubTabActiva('quiz')} 
+                className={`btn-sub-tab ${subTabActiva === 'quiz' ? 'active' : ''}`}
+              >
+                <Gamepad2 size={18} /> Iniciar Phishing Quiz
+              </button>
+              
+              <button 
+                onClick={() => setSubTabActiva('scoreboard')} 
+                className={`btn-sub-tab ${subTabActiva === 'scoreboard' ? 'active' : ''}`}
+              >
+                <Trophy size={18} /> Ver Ranking Global
+              </button>
+            </div>
+
+            <div className="sub-tab-content">
+              {subTabActiva === 'quiz' && <SeccionQuiz />}
+              {subTabActiva === 'scoreboard' && (
+                <div className="fade-in">
+                  {/* Ahora el ranking es accesible desde la pestaña principal */}
+                  <SeccionScoreboard /> 
+                </div>
+              )}
             </div>
           </div>
         )}

@@ -1,0 +1,107 @@
+/* --- CONTENEDOR DEL RANKING --- */
+.scoreboard-container {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 800px;
+  margin: 20px auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.scoreboard-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.scoreboard-header h1 {
+  color: #fff;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* --- TABLA ESTILO DASHBOARD --- */
+.ranking-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #ccc;
+  font-family: 'JetBrains Mono', monospace; /* Si tienes una fuente mono, queda genial */
+}
+
+.ranking-table th {
+  text-align: left;
+  padding: 15px;
+  background-color: #1a1a1a;
+  color: #3b82f6;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  border-bottom: 2px solid #333;
+}
+
+.ranking-table td {
+  padding: 15px;
+  border-bottom: 1px solid #222;
+  transition: background 0.3s;
+}
+
+.ranking-table tr:hover td {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+/* Resaltado para el primer lugar */
+.top-player {
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.top-player td:first-child {
+  color: #facc15; /* Oro para el puesto 1 */
+  font-weight: bold;
+}
+
+/* Celdas específicas */
+.player-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #eee;
+  font-weight: 500;
+}
+
+.score-cell {
+  color: #10b981; /* Verde neón para el score */
+  font-weight: bold;
+}
+
+/* Mensaje cuando está vacío */
+.ranking-table td[colspan="4"] {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-style: italic;
+}
+
+/* --- BOTÓN REINTENTAR (En SeccionQuiz) --- */
+.btn-reintentar {
+  margin-top: 25px;
+  background-color: transparent;
+  color: #3b82f6;
+  border: 1px solid #3b82f6;
+  padding: 10px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn-reintentar:hover {
+  background-color: #3b82f6;
+  color: white;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}

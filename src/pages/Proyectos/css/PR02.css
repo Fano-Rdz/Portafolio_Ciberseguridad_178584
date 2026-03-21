@@ -215,3 +215,100 @@
   .ethical-grid { grid-template-columns: 1fr; }
   .titulo-principal { font-size: 1.6rem; }
 }
+
+.tab-simulacion-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}
+
+/* Contenedor de los botones */
+.sub-tabs-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background-color: #1a1a1a; /* Un gris un poco más claro que el fondo principal */
+  padding: 8px;
+  border-radius: 12px;
+  width: fit-content;
+  margin: 0 auto; /* Centra la navegación */
+  border: 1px solid #333;
+}
+
+/* Estilo base de los botones */
+.btn-sub-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #a0a0a0;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-sub-tab:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Estado Activo */
+.btn-sub-tab.active {
+  background-color: #3b82f6; /* El azul que usamos en el resto del sitio */
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Contenedor del contenido */
+.sub-tab-content {
+  width: 100%;
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sub-tabs-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: #1a1a1a;
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px solid #333;
+  margin: 0 auto 20px auto; /* Centrado y margen inferior */
+  width: fit-content;
+}
+
+.btn-sub-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: transparent;
+  border: none;
+  color: #888;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-sub-tab.active {
+  background-color: #3b82f6;
+  color: white;
+}
