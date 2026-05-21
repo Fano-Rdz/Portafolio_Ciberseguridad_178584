@@ -2,15 +2,15 @@ import { useState } from 'react';
 import { ShieldCheck, Menu, X, ChevronDown } from 'lucide-react';
 import './css/Header.css';
 
-// 1. Actualizamos la interface para incluir los nuevos IDs
+// 1. Actualizamos la interface para incluir el ID 'certificaciones'
 interface HeaderProps {
-  cambiarPagina: (pagina: 'inicio' | 'P1' | 'P2' | 'P3' | 'PR01' | 'PR02' | 'SQLI') => void;
+  cambiarPagina: (pagina: 'inicio' | 'P1' | 'P2' | 'P3' | 'PR01' | 'PR02' | 'SQLI' | 'certificaciones') => void;
 }
 
 const Header = ({ cambiarPagina }: HeaderProps) => {
   const [menuAbierto, setMenuAbierto] = useState(false);
 
-  // 2. Separamos las opciones en dos arreglos
+  // 2. Separamos las opciones en los arreglos existentes
   const opcionesActividades = [
     { nombre: "Parcial 1", id: 'P1' as const },
     { nombre: "Parcial 2", id: 'P2' as const },
@@ -26,8 +26,8 @@ const Header = ({ cambiarPagina }: HeaderProps) => {
     { nombre: "SQL Injection", id: 'SQLI' as const }
   ];
 
-  // 3. Actualizamos el tipo del parámetro
-  const manejarNavegacion = (id: 'inicio' | 'P1' | 'P2' | 'P3' | 'PR01' | 'PR02' | 'SQLI') => {
+  // 3. Actualizamos el tipo del parámetro en la función de navegación
+  const manejarNavegacion = (id: 'inicio' | 'P1' | 'P2' | 'P3' | 'PR01' | 'PR02' | 'SQLI' | 'certificaciones') => {
     cambiarPagina(id);    
     setMenuAbierto(false); 
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -40,7 +40,7 @@ const Header = ({ cambiarPagina }: HeaderProps) => {
         <span>Portafolio de Seguridad Informática</span>
       </button>
 
-      {/* Menú Desktop con Dropdowns */}
+      {/* Menú Desktop con Dropdowns y el nuevo botón directo */}
       <nav className="header-nav-desktop">
         {/* Dropdown Actividades */}
         <div className="dropdown">
@@ -60,7 +60,7 @@ const Header = ({ cambiarPagina }: HeaderProps) => {
           </div>
         </div>
 
-        {/* Dropdown Proyectos (NUEVO) */}
+        {/* Dropdown Proyectos */}
         <div className="dropdown">
           <button className="nav-button dropdown-trigger">
             Proyectos <ChevronDown size={16} />
@@ -78,6 +78,7 @@ const Header = ({ cambiarPagina }: HeaderProps) => {
           </div>
         </div>
 
+        {/* Dropdown Hall of Fame */}
         <div className="dropdown">
           <button className="nav-button dropdown-trigger">
             Hall of Fame <ChevronDown size={16} />
@@ -94,9 +95,17 @@ const Header = ({ cambiarPagina }: HeaderProps) => {
             ))}
           </div>
         </div>
+
+        {/* NUEVO: Apartado directo de Certificaciones */}
+        <button 
+          className="nav-button" 
+          style={{ display: 'flex', alignItems: 'center', gap: '6px' }}
+          onClick={() => manejarNavegacion('certificaciones')}
+        >
+          Certificaciones
+        </button>
       </nav>
 
-      
       <button 
         className="hamburger-button" 
         onClick={() => setMenuAbierto(!menuAbierto)}
@@ -129,6 +138,16 @@ const Header = ({ cambiarPagina }: HeaderProps) => {
               {opcion.nombre}
             </button>
           ))}
+
+          {/* NUEVO: Sección Certificaciones en Móvil */}
+          <p className="mobile-section-title" style={{ marginTop: '1rem' }}>Logros</p>
+          <button 
+            className="mobile-nav-button"
+            style={{ fontWeight: 'bold', color: '#3b82f6' }}
+            onClick={() => manejarNavegacion('certificaciones')}
+          >
+            Certificaciones
+          </button>
         </div>
       )}
     </header>
