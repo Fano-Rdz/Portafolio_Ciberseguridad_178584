@@ -1,0 +1,369 @@
+/* ==========================================================================
+   PR03.css - Estilos Globales del SGSI de Telegram (ISO 27001)
+   ========================================================================== */
+
+.pr03-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #e2e8f0;
+}
+
+.pr03-header {
+  text-align: center;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  padding: 4rem 2rem;
+  border-radius: 16px;
+  border: 1px solid #334155;
+  margin-bottom: 2.5rem;
+}
+
+.header-badge {
+  display: inline-block;
+  background: #3b82f6;
+  padding: 0.3rem 1.2rem;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.titulo-principal {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.subtitulo {
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   Navegación por Pestañas Principales (Fases del SGSI)
+   ========================================================================== */
+.pr03-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.pr03-tabs button {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #94a3b8;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+
+.pr03-tabs button:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.pr03-tabs button.active {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* ==========================================================================
+   Tarjetas de Información (Cards) y Contenedores
+   ========================================================================== */
+.info-card {
+  background: #1e293b;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 0.75rem;
+}
+
+.section-icon { 
+  color: #3b82f6; 
+}
+
+.section-header h2 {
+  font-size: 1.25rem;
+  color: #f8fafc;
+}
+
+/* ==========================================================================
+   Métricas de Control de Auditoría (Grilla)
+   ========================================================================== */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.metric-box {
+  background: #0f172a;
+  padding: 1.25rem;
+  border-radius: 8px;
+  border-bottom: 3px solid #3b82f6;
+}
+
+.metric-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  color: #3b82f6;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.metric-box p { 
+  font-size: 0.85rem; 
+  color: #94a3b8; 
+  line-height: 1.4; 
+}
+
+/* Variantes de severidad para las cajas de métricas */
+.metric-box.crítico { border-color: #ef4444; }
+.metric-box.crítico .metric-header { color: #ef4444; }
+.metric-box.advertencia { border-color: #f59e0b; }
+.metric-box.advertencia .metric-header { color: #f59e0b; }
+.metric-box.exitoso { border-color: #10b981; }
+.metric-box.exitoso .metric-header { color: #10b981; }
+
+/* ==========================================================================
+   Tablas Técnicas (Riesgos, SoA y Acciones Correctivas)
+   ========================================================================== */
+.table-wrapper {
+  overflow-x: auto;
+  background: #0f172a;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  margin-top: 1rem;
+}
+
+.tabla-tecnica {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  min-width: 900px;
+}
+
+.tabla-tecnica th {
+  text-align: left;
+  padding: 1rem;
+  background: #273549;
+  color: #60a5fa;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.tabla-tecnica td {
+  padding: 1rem;
+  border-bottom: 1px solid #334155;
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.tabla-tecnica tr:last-child td {
+  border-bottom: none;
+}
+
+/* Clases de colores para las columnas específicas */
+.col-name { color: #3b82f6; background: rgba(59, 130, 246, 0.02); font-weight: 600; }
+.col-metrics { color: #fbbf24; font-weight: 600; }
+.col-ethic { color: #10b981; }
+
+/* ==========================================================================
+   Estructuras Organizacionales y de Cumplimiento (Grillas)
+   ========================================================================== */
+.ethical-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.ethical-list ul { 
+  list-style: none; 
+  padding: 0; 
+  margin-top: 1rem; 
+}
+
+.ethical-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 0.85rem;
+  color: #cbd5e1;
+  line-height: 1.4;
+}
+
+.conclusion-text {
+  background: rgba(59, 130, 246, 0.08);
+  border-left: 4px solid #3b82f6;
+  padding: 1.5rem;
+  border-radius: 0 12px 12px 0;
+  margin-top: 1.5rem;
+}
+
+.download-btn {
+  margin-top: 1rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.download-btn:hover {
+  background: #2563eb;
+}
+
+/* ==========================================================================
+   Sub-Navegación Interna (Simulaciones y Desgloses de Procesos)
+   ========================================================================== */
+.tab-simulacion-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}
+
+.sub-tabs-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #1a1a1a;
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px solid #333;
+  margin: 0 auto 20px auto;
+  width: fit-content;
+}
+
+.btn-sub-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: transparent;
+  border: none;
+  color: #888;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-sub-tab:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.btn-sub-tab.active {
+  background-color: #3b82f6;
+  color: white;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+}
+
+.sub-tab-content {
+  width: 100%;
+  animation: slideUp 0.4s ease-out;
+}
+
+/* ==========================================================================
+   Estados de Carga, Badges Especiales y Animaciones
+   ========================================================================== */
+.empty-state {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: #1e293b;
+  border: 2px dashed #334155;
+  border-radius: 16px;
+}
+
+.empty-icon { 
+  color: #475569; 
+  margin-bottom: 1.5rem; 
+}
+
+.status-badge {
+  background: #f59e0b;
+  color: #000;
+  padding: 0.2rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  margin: 1rem 0;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.fade-in { 
+  animation: fadeIn 0.4s ease-out; 
+}
+
+@keyframes fadeIn { 
+  from { opacity: 0; transform: translateY(8px); } 
+  to { opacity: 1; transform: translateY(0); } 
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   Consultas de Medios (Media Queries - Responsividad)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .ethical-grid { 
+    grid-template-columns: 1fr; 
+    gap: 1.5rem;
+  }
+  .titulo-principal { 
+    font-size: 1.6rem; 
+  }
+  .pr03-tabs {
+    flex-direction: column;
+    width: 100%;
+  }
+  .pr03-tabs button {
+    width: 100%;
+    justify-content: center;
+  }
+  .sub-tabs-navigation {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .btn-sub-tab {
+    width: 100%;
+    justify-content: center;
+  }
+}

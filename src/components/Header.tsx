@@ -4,7 +4,7 @@ import './css/Header.css';
 
 // 1. Actualizamos la interface para incluir el ID 'certificaciones'
 interface HeaderProps {
-  cambiarPagina: (pagina: 'inicio' | 'P1' | 'P2' | 'P3' | 'PR01' | 'PR02' | 'SQLI' | 'certificaciones') => void;
+  cambiarPagina: (pagina: 'inicio' | 'P1' | 'P2' | 'P3' | 'PR01' | 'PR02' | 'PR03'  | 'SQLI' | 'certificaciones') => void;
 }
 
 const Header = ({ cambiarPagina }: HeaderProps) => {
@@ -20,6 +20,7 @@ const Header = ({ cambiarPagina }: HeaderProps) => {
   const opcionesProyectos = [
     { nombre: "PR01", id: 'PR01' as const },
     { nombre: "PR02", id: 'PR02' as const },
+    { nombre: "PR03", id: 'PR03' as const },
   ];
 
   const opcionesHoF = [
@@ -27,7 +28,7 @@ const Header = ({ cambiarPagina }: HeaderProps) => {
   ];
 
   // 3. Actualizamos el tipo del parámetro en la función de navegación
-  const manejarNavegacion = (id: 'inicio' | 'P1' | 'P2' | 'P3' | 'PR01' | 'PR02' | 'SQLI' | 'certificaciones') => {
+  const manejarNavegacion = (id: 'inicio' | 'P1' | 'P2' | 'P3' | 'PR01' | 'PR02' | 'PR03' | 'SQLI' | 'certificaciones') => {
     cambiarPagina(id);    
     setMenuAbierto(false); 
     window.scrollTo({ top: 0, behavior: 'smooth' });

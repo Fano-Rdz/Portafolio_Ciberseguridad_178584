@@ -3,23 +3,24 @@ import Footer from './components/footer';
 import { useState } from 'react';
 import "./index.css";
 import { Inicio, Parcial1, Parcial2, Parcial3 } from './pages';
-import { PR01, PR02 } from './pages/Proyectos';
+import { PR01, PR02, PR03 } from './pages/Proyectos';
 import { SQLInjection } from './pages/HallOfFame';
 // 1. Importamos el nuevo componente (lo crearemos a continuación)
 import Certificaciones from './pages/Certificaciones'; 
 
 function App() {
   // 2. Agregamos 'certificaciones' a la unión de tipos del useState
-  const [paginaActual, setPaginaActual] = useState<'inicio' | 'P1' | 'P2' | 'P3' | 'PR01' | 'PR02' | 'SQLI' | 'certificaciones'>('inicio');
+  const [paginaActual, setPaginaActual] = useState<'inicio' | 'P1' | 'P2' | 'P3' | 'PR01' | 'PR02' | 'PR03' | 'SQLI' | 'certificaciones'>('inicio');
 
   // 3. Tipamos el objeto Record de forma estricta para que coincida exactamente con las páginas válidas
-  const componentes: Record<'inicio' | 'P1' | 'P2' | 'P3' | 'PR01' | 'PR02' | 'SQLI' | 'certificaciones', React.ReactNode> = {
+  const componentes: Record<'inicio' | 'P1' | 'P2' | 'P3' | 'PR01' | 'PR02' | 'PR03' | 'SQLI' | 'certificaciones', React.ReactNode> = {
     inicio: <Inicio />,
     P1: <Parcial1 />,
     P2: <Parcial2 />,
     P3: <Parcial3 />,
     PR01: <PR01 />, 
     PR02: <PR02 />,
+    PR03: <PR03 />,
     SQLI: <SQLInjection />,
     certificaciones: <Certificaciones /> // <-- 4. Añadimos el nuevo módulo aquí
   };
