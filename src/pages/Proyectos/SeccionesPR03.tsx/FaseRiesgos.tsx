@@ -1,4 +1,4 @@
-import { ShieldAlert, CheckCircle, ListFilter } from 'lucide-react';
+import { ShieldAlert, ListFilter } from 'lucide-react';
 
 export const FaseRiesgos = () => {
   return (

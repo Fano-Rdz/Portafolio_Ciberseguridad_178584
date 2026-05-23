@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Download, ShieldAlert, Eye, DollarSign, UserCheck } from 'lucide-react';
+import { Download, Eye, DollarSign, UserCheck } from 'lucide-react';
 
 export const Actividad16 = () => {
   // Estado para controlar qué escenario se muestra dentro de la Actividad 16
